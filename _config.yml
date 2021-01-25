@@ -1,0 +1,10 @@
+title: nitkori
+email: webmaster@nitkori.net
+description: nitkori
+baseurl: ""
+url: "https://nitkori.net"
+github_username:  nitkori
+
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap

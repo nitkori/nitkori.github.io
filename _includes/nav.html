@@ -1,0 +1,21 @@
+<nav>
+    <div class="nav-outer">
+        <div class="nav-contents">
+            <a class="branding" href="/">nitkori</a>
+            {% assign current = page.url | downcase | split: '/' %}
+            {% if current[1] == "contact" %}
+            <ul class="contact">
+            {% else %}
+            <ul>
+            {% endif %}
+                <li><div><a href="/">Work</a></div></li>
+                <li><div><a href="/blog">Blog</a></div></li>
+                {% if current[1] == "contact" %}
+                <li><div><a class="current" href="/contact">Contact</a></div></li>
+                {% else %}
+                <li><div><a href="/contact">Contact</a></div></li>
+                {% endif %}
+            </ul>
+        </div>
+    </div>
+</nav>
