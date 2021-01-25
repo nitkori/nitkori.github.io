@@ -22,7 +22,7 @@
     <meta name="twitter:description" content="{{ page.description }}">
     <meta name="twitter:image" content="{% if page.type == "blog" %}{{ site.url }}{{ page.img-url }}{{ page.header-img }}{% else %}{{ site.url }}{{ '/assets/img/share-img.jpg'}}{% endif %}">
     <meta name="description" content="{{ page.description }}">
-    <link rel="shortcut icon" href="{{ "/assets/favicon.ico" }}">
+    {% include favicon.html %}
     <link rel="stylesheet" href="{{ "/assets/styles.css" }}">
     {% include analytics.html %}
 </head>
