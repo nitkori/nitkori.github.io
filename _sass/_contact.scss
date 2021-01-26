@@ -3,18 +3,20 @@
   grid-template-columns: 420px 1fr;
   height: 100%;
 
-  .cover {
-    background: url(/assets/img/contact/wall.jpg) no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-  }
-
   @media (max-width: $break-medium) {
     display: initial;
     grid-template-columns: 1fr;
   }
+}
+
+.cover {
+  height: 100vh;
+  overflow: hidden;
+  background: url(/assets/img/contact/wall.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 .over {
@@ -55,25 +57,22 @@
   .email-link:hover {
     transform: scale(1.025);
   }
+}
 
-  .mobile {
+.mobile {
+  position: relative;
+  margin: 20px 7%;
+
+  .email {
     margin-top: 14px;
   }
 
-  a {
-    color: black;
-    text-decoration: none;
-    opacity: 1;
-    transition: 0.3s;
-    user-select: none;
-    -ms-user-select: none;
-    -moz-user-select: -moz-none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-  }
-
-  a:hover {
-    opacity: 0.5;
+  .email-link {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin-top: 0;
+    padding: 12px 24px;
   }
 }
 
@@ -97,10 +96,13 @@ hr {
 }
 
 .grid-info {
-  margin-top: 131px;
-  visibility: hidden;
+  .inner {
+    padding-top: 131px;
+    padding-bottom: 28px;
+    visibility: hidden;
 
-  @media (max-width: $break-medium) {
-    visibility: visible;
+    @media (max-width: $break-medium) {
+      visibility: visible;
+    }
   }
 }

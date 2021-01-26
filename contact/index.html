@@ -11,28 +11,18 @@ description: "nitkori"
     <button class="email-link" onclick="window.open('about:blank').location.href='mailto:webmaster@nitkori.net'">메일앱에서 열기</button>
 </div>
 <div class="contact-footer">© 2018 - 2021 nitkori</div>
-<div class="contact-grid">
-    <div class="grid-info" style="">
-        <hr>
-        <div class="contact-info" style="margin: 20px 7%;">
-            <p class="location">nitkori<br/>대한민국, 서울</p>
-            <p class="mobile">
-                <a class="email" href="mailto:webmaster@nitkori.net" target="_blank">webmaster@nitkori.net</a>
-            </p>
+<div class="cover">
+    <div class="contact-grid">
+        <div class="grid-info" style="background-color: white;">
+            <div class="inner">
+                <hr>
+                <div class="contact-info mobile">
+                    <p class="location">nitkori<br/>대한민국, 서울</p>
+                    <p class="email">webmaster@nitkori.net</p>
+                    <button class="email-link" onclick="window.open('about:blank').location.href='mailto:webmaster@nitkori.net'">메일앱에서 열기</button>
+                </div>
+            </div>
         </div>
+        <div></div>
     </div>
-    <div class="cover" style="height: 100%;"></div>
 </div>
-
-<script>
-    let body = document.getElementsByTagName('body')[0];
-
-    if (window.matchMedia("(max-width: 760px)").matches) body.style.overflow = "hidden";
-    else body.style.overflow = "visible";
-
-    let onresize = function () {
-        if (window.matchMedia("(max-width: 760px)").matches) body.style.overflow = "hidden";
-        else body.style.overflow = "visible";
-    };
-    window.addEventListener("resize", onresize);
-</script>
